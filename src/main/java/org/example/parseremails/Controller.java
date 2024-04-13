@@ -71,37 +71,6 @@ public class Controller implements Initializable {
         requestField.setOnKeyReleased(event -> findButton.setDisable(requestField.getText().isEmpty() || numberField.getText().isEmpty()));
         numberField.setOnKeyReleased(event -> findButton.setDisable(requestField.getText().isEmpty() || numberField.getText().isEmpty()));
 
-//        findButton.setOnAction(event -> {
-//            try {
-//                findButton.setVisible(false);
-//                requestField.setDisable(true);
-//                numberField.setDisable(true);
-//                statusInfo.setVisible(true);
-//                progressBar.setVisible(true);
-//
-//                query = requestField.getText() + " emails";
-//                pages = Integer.parseInt(numberField.getText());
-//
-//                findPages(query, pages);
-//
-//                statusInfo.setVisible(false);
-//                progressBar.setVisible(false);
-//                finish.setVisible(true);
-//                emailsFound.setVisible(true);
-//                checkSaves.setVisible(true);
-//                parseAgain.setVisible(true);
-//
-//                if (!emails.isEmpty()) {
-//                    emailsFound.setText(emails.size() + " emails were found");
-//                } else {
-//                    emailsFound.setText("No emails found");
-//                }
-//            } catch (NumberFormatException e) {
-//                alert("Wrong input. This field must contain only the numbers");
-//            }
-//        });
-
-
         parseAgain.setOnAction(event -> {
             finish.setVisible(false);
             emailsFound.setVisible(false);
