@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="459.0" prefWidth="563.0" stylesheets="@../../../appstyle/styles.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.parseremails.Controller">
+      <Label layoutX="186.0" layoutY="62.0" prefHeight="42.0" prefWidth="191.0" text="Enter your request" textAlignment="CENTER">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="requestField" layoutX="172.0" layoutY="121.0" prefHeight="26.0" prefWidth="220.0" />
+      <Label layoutX="165.0" layoutY="168.0" prefHeight="30.0" prefWidth="234.0" text="Number of pages to treat">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="numberField" alignment="CENTER" layoutX="250.0" layoutY="216.0" prefHeight="26.0" prefWidth="62.0" />
+      <Button fx:id="findButton" layoutX="174.0" layoutY="276.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="214.0" text="Find emails">
+         <font>
+            <Font size="19.0" />
+         </font></Button>
+   <ProgressBar fx:id="progressBar" layoutX="181.0" layoutY="308.0" prefWidth="200.0" progress="0.0" />
+   <Label fx:id="statusInfo" layoutX="193.0" layoutY="276.0" prefHeight="30.0" prefWidth="346.0" text="Searching the emails...">
+      <font>
+         <Font size="17.0" />
+      </font>
+   </Label>
+   <Label fx:id="finish" layoutX="140.0" layoutY="277.0" prefHeight="27.0" prefWidth="284.0" text="Email parsing has been terminated">
+      <font>
+         <Font size="18.0" />
+      </font>
+   </Label>
+   <Label fx:id="emailsFound" layoutX="217.0" layoutY="312.0" text="80 emails were found">
+      <font>
+         <Font size="18.0" />
+      </font>
+   </Label>
+   <Label layoutX="250.0" layoutY="402.0" />
+   <Label fx:id="checkSaves" layoutX="104.0" layoutY="339.0" prefHeight="27.0" prefWidth="381.0" text="Check them in the saves folder in txt document">
+      <font>
+         <Font size="18.0" />
+      </font>
+   </Label>
+   <Button fx:id="parseAgain" layoutX="226.0" layoutY="376.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="111.0" text="Parse again?" />
+</AnchorPane>
