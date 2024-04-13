@@ -71,18 +71,6 @@ public class Controller implements Initializable {
         requestField.setOnKeyReleased(event -> findButton.setDisable(requestField.getText().isEmpty() || numberField.getText().isEmpty()));
         numberField.setOnKeyReleased(event -> findButton.setDisable(requestField.getText().isEmpty() || numberField.getText().isEmpty()));
 
-        parseAgain.setOnAction(event -> {
-            finish.setVisible(false);
-            emailsFound.setVisible(false);
-            checkSaves.setVisible(false);
-            parseAgain.setVisible(false);
-            requestField.setText("");
-            numberField.setText("");
-            requestField.setDisable(false);
-            numberField.setDisable(false);
-            findButton.setVisible(true);
-            findButton.setDisable(true);
-        });
         findButton.setOnAction(event -> {
             findButton.setVisible(false);
             requestField.setDisable(true);
@@ -133,6 +121,19 @@ public class Controller implements Initializable {
             Thread thread = new Thread(task);
             thread.setDaemon(true);
             thread.start();
+        });
+
+        parseAgain.setOnAction(event -> {
+            finish.setVisible(false);
+            emailsFound.setVisible(false);
+            checkSaves.setVisible(false);
+            parseAgain.setVisible(false);
+            requestField.setText("");
+            numberField.setText("");
+            requestField.setDisable(false);
+            numberField.setDisable(false);
+            findButton.setVisible(true);
+            findButton.setDisable(true);
         });
     }
     public void findPages(String query, int pages) {
