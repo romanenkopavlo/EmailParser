@@ -3,9 +3,6 @@ package org.example.parseremails;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
-
-import java.io.File;
-import java.net.URI;
 import javafx.stage.Stage;
 
 import java.io.IOException;
